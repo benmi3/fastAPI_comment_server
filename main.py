@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 # Local packages
-import comment.comment as comment
+import models.comment as comment
 
 
 class CommentJson(BaseModel):

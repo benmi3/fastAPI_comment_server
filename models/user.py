@@ -20,18 +20,20 @@ def check_db_connection() -> bool:
         return False
 
 
-def setup_comment_table():
+def setup_user_table():
     # Connect to an existing database
     with psycopg.connect(db_url) as conn:
         # Open a cursor to perform database operations
         with conn.cursor() as cur:
             # Execute a command: this creates a new table
             cur.execute("""
-                    CREATE TABLE comment_table (
+                    CREATE TABLE user_table (
                         id serial PRIMARY KEY,
                         cid integer,
-                        comment text,
-                        post_slug text)
+                        user_name text,
+                        user_pass text,
+                        user_salt text,
+                        user_pepper text)
                         IF NOT EXISTS
                     """)
 
