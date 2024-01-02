@@ -1,0 +1,26 @@
+[project]
+name = "fast-comment-server"
+version = "0.0.1"
+dependencies = [
+    "fastapi>=0.108.0",
+    "psycopg>=3.1.16",
+    "pydantic>=2.5.3",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Benjamin Jørgensen", email = "me@benmi.me"},
+]
+maintainers = [
+  {name = "Benjamin Jørgensen", email = "me@benmi.me"},
+]
+description = "Beatufil discription about a comment server written in python fastapi"
+readme = "README.md"
+license = {file = "LICENSE.md"}
+keywords = ["comment"]
+
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/me/spam.git"
+"Bug Tracker" = "https://github.com/me/spam/issues"
+Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
