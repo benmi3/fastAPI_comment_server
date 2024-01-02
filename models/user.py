@@ -63,6 +63,7 @@ async def select_user(db_url: str, username: str):
                 (100, "abc'def"))
             user_data = await cur.fetchone()
     if user_data is None:
+        # remember to check if there is somehting wrong
         return False
     else:
         return user_data
