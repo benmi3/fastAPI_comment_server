@@ -41,6 +41,9 @@ async def post_comment(post: str, item: CommentJson):
     print(json_compatible_item_data)
 
 
+
+
+
 if __name__ == "__main__":
     if not models.check_db():
         print("Could not get connection to database")
