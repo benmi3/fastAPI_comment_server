@@ -2,7 +2,7 @@ import os
 import toml
 
 
-def load_config(file_path):
+def load_config(file_path) -> dict | None:
     try:
         with open(file_path, 'r') as config_file:
             config_data = toml.load(config_file)
@@ -12,7 +12,7 @@ def load_config(file_path):
         return None
 
 
-def get_environment_variables(config_data):
+def get_environment_variables(config_data) -> dict:
     if config_data and 'environment_variables' in config_data:
         env_vars = config_data['environment_variables']
         return env_vars
@@ -21,7 +21,7 @@ def get_environment_variables(config_data):
         return {}
 
 
-def set_environment_variables(env_vars):
+def set_environment_variables(env_vars) -> None:
     for key, value in env_vars.items():
         os.environ[key] = str(value)
 

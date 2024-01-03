@@ -1,5 +1,4 @@
 from typing import Union
-from datetime import datetime
 from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
@@ -39,9 +38,6 @@ async def post_comment(post: str, item: CommentJson):
     json_compatible_item_data = jsonable_encoder(item)
     print(post)
     print(json_compatible_item_data)
-
-
-
 
 
 if __name__ == "__main__":
